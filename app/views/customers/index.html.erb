@@ -1,0 +1,41 @@
+<div class="container">
+<h1>Listing customers</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Cust company name</th>
+      <th>Cust name</th>
+      <th>Cust street</th>
+      <th>Cust city</th>
+      <th>Cust state</th>
+      <th>Cust zipcode</th>
+      <th>Cust phone</th>
+      <th>Cust fax</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.cust_company_name %></td>
+        <td><%= customer.cust_name %></td>
+        <td><%= customer.cust_street %></td>
+        <td><%= customer.cust_city %></td>
+        <td><%= customer.cust_state %></td>
+        <td><%= customer.cust_zipcode %></td>
+        <td><%= customer.cust_phone %></td>
+        <td><%= customer.cust_fax %></td>
+        <td><%= link_to 'Show', customer %></td>
+        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer', new_customer_path, class:"btn btn-default" %>
+</div>

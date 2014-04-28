@@ -1,0 +1,46 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cust company name:</strong>
+  <%= @customer.cust_company_name %>
+</p>
+
+<p>
+  <strong>Cust name:</strong>
+  <%= @customer.cust_name %>
+</p>
+
+<p>
+  <strong>Cust street:</strong>
+  <%= @customer.cust_street %>
+</p>
+
+<p>
+  <strong>Cust city:</strong>
+  <%= @customer.cust_city %>
+</p>
+
+<p>
+  <strong>Cust state:</strong>
+  <%= @customer.cust_state %>
+</p>
+
+<p>
+  <strong>Cust zipcode:</strong>
+  <%= @customer.cust_zipcode %>
+</p>
+
+<p>
+  <strong>Cust phone:</strong>
+  <%= @customer.cust_phone %>
+</p>
+
+<p>
+  <strong>Cust fax:</strong>
+  <%= @customer.cust_fax %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>
+</div>
